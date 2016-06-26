@@ -9,14 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var home_component_1 = require('./components/home/home.component');
+var document_component_1 = require('./components/document/document.component');
+var batch_component_1 = require('./components/batch/batch.component');
 var SeedApp = (function () {
     function SeedApp() {
     }
     SeedApp = __decorate([
         core_1.Component({
             selector: 'app',
-            templateUrl: 'app/seed-app.html',
-        }), 
+            providers: [],
+            pipes: [],
+            directives: [router_1.ROUTER_DIRECTIVES],
+            templateUrl: 'app/seed-app.html'
+        }),
+        router_1.Routes([
+            { path: '/', component: home_component_1.HomeComponent },
+            { path: '/document', component: document_component_1.DocumentComponent },
+            { path: '/batch', component: batch_component_1.BatchComponent }
+        ]), 
         __metadata('design:paramtypes', [])
     ], SeedApp);
     return SeedApp;
