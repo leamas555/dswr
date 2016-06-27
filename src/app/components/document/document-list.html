@@ -1,0 +1,19 @@
+<fieldset>
+	<legend>List of Available Documents</legend>
+	<table class="table">
+		<thead>
+			<tr>
+				<th> Document # </th>
+				<th> Transaction Date </th>
+				<th> Complete / Incomplete </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let document of listOfDocuments">
+				<td>{{document.id}}</td>
+				<td>{{document.transactionDate}}</td>
+				<td>{{document.completed}}</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
