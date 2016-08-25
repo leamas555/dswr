@@ -1,14 +1,10 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import {ROUTER_PROVIDERS} from '@angular/router';
-
-import { SeedApp } from './seed-app';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule }              from './app.module';
 
 // enableProdMode()
 
-bootstrap(SeedApp,[
-  ROUTER_PROVIDERS
-])
-.then(
-    success => console.log('SeedApp bootstrapped!'),
-    error => console.log(error)
-);
+platformBrowserDynamic().bootstrapModule(AppModule)
+ .then(
+     success => console.log('SeedApp bootstrapped!'),
+     error => console.log(error)
+ );
